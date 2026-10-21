@@ -1,6 +1,13 @@
 # Prerequisites
 *.d
 
+# ===== Visual Studio 工程文件（全部忽略，只提交c/h源码）=====
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
 # Object files
 *.o
 *.ko
@@ -53,3 +60,12 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Visual Studio - 用户私有配置
+*.vcxproj.user
+
+# Visual Studio 编译中间目录
+obj/
+.VS/
+x64/
+C_Learn/
