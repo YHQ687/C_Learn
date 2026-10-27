@@ -93,12 +93,12 @@
 //	return 0;
 //}
 
-//强制转换
-int main()
-{
-	int a = 10;
-	int b = 3;
-	float c = (float)a / b;	//强制转换，将a转换为浮点数，再进行除法运算，结果为浮点数。
-	printf("c = %f\n", c);	//输出c的值，结果为3.333333
-	return 0;
-}
+////强制转换
+//int main()
+//{
+//	int a = 10;
+//	int b = 3;
+//	float c = (float)a / b;	//强制转换，将a转换为浮点数，再进行除法运算，结果为浮点数。
+//	printf("c = %f\n", c);	//输出c的值，结果为3.333333
+//	return 0;
+//}

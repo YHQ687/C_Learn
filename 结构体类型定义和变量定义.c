@@ -1,58 +1,60 @@
-///*�������ͣ�
-//* �����������ͣ�int��float��double��char��
-//* �����������ͣ����顢ָ�롢�ṹ�塢�����塢ö������
-//* �ṹ����һ�����û��Զ�����µ��������ͣ������԰�����ͬ���͵ĳ�Ա�������������ͬ���͵����������һ���γ�һ�����塣�ṹ��Ķ���ʹ�ùؼ���struct��
-//*/
-//
-//#include<stdio.h>
-//#include<string.h>
-//#include<stdlib.h>
-//
-////����ṹ������:
-//struct student_s {		//struct student_s�ǽṹ�����͵����֣�
-//	int id;
-//	char name[25];
-//	char gender;
-//	float Chinese;
-//	float Math;
-//	float English;
-//};//�ֺŲ���ʡ��
-//
-////����ṹ������:
-//struct  {		//�����ṹ�����ͣ�ֻ������һ�� 
-//	int id;
-//	char name[25];
-//	char gender;
-//};//�ֺŲ���ʡ��
-//
-////typedef�ṹ��������
-//
-////����ṹ������:
-//typedef struct {		//����һ�������ṹ�����ͣ����ֽ���S
-//	int id;
-//	char name[25];
-//	char gender;
-//}S;//�ֺŲ���ʡ��
-//
-////�����ýṹ��	�ṹ���л���һ���ṹ����������ֽṹ���Ϊ�����ýṹ��
-//struct Node {
-//	int data;
-//	struct Node* next;	//�ṹ���в��ܰ����ṹ�壬ֻ��ʹ�øĽṹ���ָ�루��Ȼ�Լ������Լ�����С�����������޴󡣣���ֻ�ܶ���ָ���Լ����͵�ָ�����
-//};//�ýṹ���а���һ��ָ���Լ����͵�ָ�����next
-//
-//typedef struct Node {//����ʹ��typedef struct Node Node;	//����һ���ṹ������Node��Node�ǽṹ�����͵�����
-//	int data;
-//	 Node* next;	
-//}Node;//������������Ϊ�ýṹ���ڲ��Ѿ�ʹ����Node���ͣ�Node���ͻ�û�ж�����ɣ����Բ���ʹ��Node���͡�ֻ��ʹ��struct Node���͡�Node* next����ʹ��struct Node* next;	
-//
-//int main() {
-//	//struct student_s stu;	//����ṹ�����stu,stu���ǽṹ�������
-//	struct student_s stu = { 1001, "����", '��', 90, 80, 70 };//����ṹ�����stu����ʼ��
-//
-//	//.����������ݽṹ��ȥ���ʽṹ������ĳ�Ա
-//	printf("ѧ��: %d\n  ����: %s\n  �Ա�: %s\n  ���ĳɼ�: %.2f\n  ��ѧ�ɼ�: %.2f\n  Ӣ��ɼ�: %.2f\n", stu.id, stu.name, stu.gender, stu.Chinese, stu.Math, stu.English);
-//	
-//	S s = { 1002, "����", 'Ů' };//����ṹ�����s����ʼ��
-//	 
-//	return 0;
-//}
+/*
+结构体：
+- 结构体是一种自定义的数据类型，可以把不同类型的数据组合在一起。
+- 例如：int、float、double、char 等都可以组合成一个结构体。
+- 结构体的定义使用关键字 struct。
+*/
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+// 1. 普通结构体类型定义
+struct student_s {
+    int id;
+    char name[25];
+    char gender;
+    float Chinese;
+    float Math;
+    float English;
+};
+
+// 2. 匿名结构体类型定义（只定义一次）
+struct {
+    int id;
+    char name[25];
+    char gender;
+};
+
+// 3. typedef 结构体类型定义
+typedef struct {
+    int id;
+    char name[25];
+    char gender;
+} S;
+
+// 4. 链表结点结构体：包含指向同类型的指针
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// 5. 也可以给结构体起别名
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
+
+int main() {
+    // 定义结构体变量 stu，并初始化
+    struct student_s stu = {1001, "张三", '男', 90.0f, 80.0f, 70.0f};
+
+    // 使用 . 运算符访问结构体成员
+    printf("学号: %d\n姓名: %s\n性别: %c\n语文成绩: %.2f\n数学成绩: %.2f\n英语成绩: %.2f\n",
+           stu.id, stu.name, stu.gender, stu.Chinese, stu.Math, stu.English);
+
+    S s = {1002, "李四", '女'};
+    printf("学号: %d\n姓名: %s\n性别: %c\n", s.id, s.name, s.gender);
+
+    return 0;
+}
