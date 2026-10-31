@@ -5,9 +5,9 @@
 //- 结构体的定义使用关键字 struct。
 //*/
 //
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 //
 //// 1. 普通结构体类型定义
 //struct student_s {
@@ -58,3 +58,43 @@
 //
 //    return 0;
 //}
+
+//结构传参：
+struct S
+{
+	int data[1000];
+	int num;
+};
+
+void print1(struct S t)
+{
+	int i = 0;
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d", t.data[i]);
+	}
+	printf("\n");
+	printf("%d\n", t.num);
+};
+
+void print2(const struct S* ps)
+{
+	int i = 0;
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d", ps->data[i]);
+	}
+	printf("\n");
+	printf("%d\n", ps->num);
+};
+
+
+
+int main()
+{
+	struct S s = { { 1,2,3,4,5 },100 };
+	print1(s);
+
+	print2(&s);
+	return 0;
+}
