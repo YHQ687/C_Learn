@@ -75,29 +75,100 @@
 
 
 //计算某年某月有多少天
-int get_days_of_month(int x, int y)
-{
-	int days[] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
-	int day = days[y];
-	if (leap_year(y) && 2 == y)
-		day += 1;
-	return day;
-}
+//int get_days_of_month(int x, int y)
+//{
+//	int days[] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+//	int day = days[y];
+//	if (leap_year(y) && 2 == y)
+//		day += 1;
+//	return day;
+//}
+//
+//int leap_year(int y)
+//{
+//	if (((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0)))
+//		return 1;
+//	else
+//		return 0;
+//}
+//
+//int main()
+//{
+//	int year = 0;
+//	int month = 0;
+//	scanf("%d %d", &year, &month);
+//	int day = get_days_of_month(year, month);
+//	printf("%d", day);
+//	return 0;
+//}
 
-int leap_year(int y)
-{
-	if (((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0)))
-		return 1;
-	else
-		return 0;
-}
+//打印
+//int main()
+//{
+//	printf("%d", printf("%d ",printf("%d ",43)));//43 3 2
+//	//printf返回值是打印的个数。
+//
+//	return 0;
+//}
 
-int main()
-{
-	int year = 0;
-	int month = 0;
-	scanf("%d %d", &year, &month);
-	int day = get_days_of_month(year, month);
-	printf("%d", day);
-	return 0;
-}
+
+//单个文件声明定义
+//int get_days_of_month(int x, int y);
+//int leap_year(int y);
+//
+//int main()
+//{
+//	int year = 0;
+//	int month = 0;
+//	scanf("%d %d", &year, &month);
+//	int day = get_days_of_month(year, month);
+//	printf("%d", day);
+//	return 0;
+//}
+//
+//int get_days_of_month(int x, int y)
+//{
+//	int days[] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+//	int day = days[y];
+//	if (leap_year(y) && 2 == y)
+//		day += 1;
+//	return day;
+//}
+//
+//int leap_year(int y)
+//{
+//	if (((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0)))
+//		return 1;
+//	else
+//		return 0;
+//}
+
+//加法函数
+//#include "Add.h"
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//	int c = Add(a, b);
+//	printf("%d", c);
+//	return 0;
+//}
+
+
+//static修饰局部变量
+//n只创建一次，将n改变为了全局变量。
+//void test()
+//{
+//	static int n = 10;
+//	n++;
+//	printf("%d", n);
+//}
+//
+//int main()
+//{
+//	for (int i = 0;i < 5;i++)
+//		test();
+//	return 0;
+//}
