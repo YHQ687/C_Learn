@@ -1,4 +1,4 @@
-# Prerequisites
+﻿# Prerequisites
 *.d
 
 # ===== Visual Studio 工程文件（全部忽略，只提交c/h源码）=====
@@ -70,4 +70,4 @@ dkms.conf
 obj/
 .VS/
 x64/
-
+Debug/

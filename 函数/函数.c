@@ -1,5 +1,5 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+﻿//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
 
 ////写一个加法函数，完成2个整形变量的加法操作。
 //int sum(int x, int y)
